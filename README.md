@@ -1,0 +1,2 @@
+Things that made me think. More or less useful, but which I might miss sooner or later. So I decided to put them in one place rather than lose them again. New things might come along when I find them in my mess.
+- jihem
