@@ -1,0 +1,21 @@
+name = "raylib"
+version = "0.0.1"
+target = "javascript"
+
+# Fill out these fields if you intend to generate HTML documentation or publish
+# your project to the Hex package manager.
+#
+description = "Gleam bindings to the raylib module for Node.js : `npm install raylib` in your project folder."
+licences = ["CC-BY-SA-4.0"]
+repository = { type = "github", user = "jihem", repo = "oddities/gleam/raylib" }
+# links = [{ title = "Website", href = "" }]
+#
+# For a full reference of all the available options, you can have a look at
+# https://gleam.run/writing-gleam/gleam-toml/.
+
+[dependencies]
+gleam_stdlib = ">= 0.44.0 and < 2.0.0"
+gleam_javascript = ">= 1.0.0 and < 2.0.0"
+
+[dev-dependencies]
+gleeunit = ">= 1.0.0 and < 2.0.0"
