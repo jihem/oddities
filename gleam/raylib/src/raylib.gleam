@@ -33,3 +33,33 @@ pub fn draw_text(
   font_size: Int,
   color: Color,
 ) -> Nil
+
+@external(javascript, "./raylib.js", "rl_draw_pixel")
+pub fn draw_pixel(pos_x: Int, pos_y: Int, color: Color) -> Nil
+
+@external(javascript, "./raylib.js", "rl_draw_line")
+pub fn draw_line(
+  start_pos_x: Int,
+  start_pos_y: Int,
+  end_pos_x: Int,
+  end_pos_y: Int,
+  color: Color,
+) -> Nil
+
+@external(javascript, "./raylib.js", "rl_radian")
+pub fn radian(degree: Float) -> Float
+
+@external(javascript, "./raylib.js", "rl_cos")
+pub fn cos(degree: Float) -> Float
+
+@external(javascript, "./raylib.js", "rl_sin")
+pub fn sin(degree: Float) -> Float
+
+@external(javascript, "./raylib.js", "rl_get_key_pressed")
+pub fn get_key_pressed() -> Int
+
+@external(javascript, "./raylib.js", "rl_get_char_pressed")
+pub fn get_char_pressed() -> Int
+
+@external(javascript, "./raylib.js", "rl_is_key_down")
+pub fn is_key_down(key: Int) -> Bool
