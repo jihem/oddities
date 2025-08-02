@@ -4,7 +4,7 @@
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/raylib/)
 
 ```sh
-gleam add raylib@1
+gleam add raylib
 ```
 ```gleam
 import raylib as rl
