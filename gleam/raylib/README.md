@@ -1,8 +1,8 @@
 # raylib
-
+<!--
 [![Package Version](https://img.shields.io/hexpm/v/raylib)](https://hex.pm/packages/raylib)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/raylib/)
-
+-->
 ```sh
 gleam add raylib
 ```
@@ -35,9 +35,7 @@ pub fn  main() -> Nil {
   rl.close_window()
 }
 ```
-
-Further documentation can be found at <https://hexdocs.pm/raylib>.
-
+<!-- Further documentation can be found at <https://hexdocs.pm/raylib>. -->
 ## Development
 
 ```sh
