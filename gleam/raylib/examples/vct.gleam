@@ -1,6 +1,6 @@
 //
 //    _._
-//  o|- -|o This file is licensed under CC4-BY international license.
+//  o|- -|o This file is licensed under CC4-BY-SA international license.
 //   ( l )  To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0/
 //     =    Author: jean-marc "jihem" quere 2025 - jean-marc.quere@codyssea.com
 //
