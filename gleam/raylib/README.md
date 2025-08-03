@@ -1,4 +1,5 @@
 # raylib
+<img src="https://github.com/jihem/oddities/blob/main/gleam/raylib/examples/gleam-raylib.png" alt="gleam-raylib" width="400"/>
 <!--
 [![Package Version](https://img.shields.io/hexpm/v/raylib)](https://hex.pm/packages/raylib)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-ffaff3)](https://hexdocs.pm/raylib/)
