@@ -1,6 +1,6 @@
 # raylib
 
-<img src="https://github.com/jihem/oddities/blob/main/gleam/raylib/examples/gleam-raylib.png" alt="gleam-raylib" width="400"/>
+<img src="https://github.com/jihem/oddities/blob/main/gleam/raylib/examples/gleam-raylib.png" alt="gleam-raylib" width="600"/>
 
 <!--
 [![Package Version](https://img.shields.io/hexpm/v/raylib)](https://hex.pm/packages/raylib)
