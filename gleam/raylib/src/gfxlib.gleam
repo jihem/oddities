@@ -24,7 +24,7 @@ pub fn shape_rotate(
   shapes: Dict(String, Shape),
   name: String,
   angle: Int,
-) -> Shape {
+) -> Dict(String, Shape) {
   let shape = shape_get(shapes, name)
   case shape {
     Shape(pos, ang, pts, lns) -> {
@@ -44,17 +44,18 @@ pub fn shape_rotate(
             float.round(vx *. sin +. vy *. cos),
           )
         })
-      Shape(pos, ang + angle, prs, lns)
+      Shape(pos, result.unwrap(int.modulo(ang + angle, 360), 0), prs, lns)
     }
     _ -> None
   }
+  |> shape_set(shapes, name, _)
 }
 
 pub fn shape_move(
   shapes: Dict(String, Shape),
   name: String,
   speed: Int,
-) -> Shape {
+) -> Dict(String, Shape) {
   let shape = shape_get(shapes, name)
   case shape {
     Shape(pos, ang, pts, lns) -> {
@@ -74,6 +75,7 @@ pub fn shape_move(
     }
     _ -> None
   }
+  |> shape_set(shapes, name, _)
 }
 
 pub fn vector2(lst: List(Int)) -> List(Vector2) {
@@ -123,6 +125,20 @@ pub fn shape_get(shapes: Dict(String, Shape), name: String) -> Shape {
 }
 
 pub fn shape_set(
+  shapes: Dict(String, Shape),
+  name: String,
+  shape: Shape,
+) -> Dict(String, Shape) {
+  case shape {
+    Shape(_, _, _, _) -> {
+      shapes
+      |> dict.upsert(name, fn(_) { shape })
+    }
+    _ -> shapes
+  }
+}
+
+pub fn shape_reg(
   shapes: Dict(String, Shape),
   name: String,
   shape: Shape,
