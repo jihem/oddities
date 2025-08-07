@@ -67,11 +67,10 @@ pub fn rl_loop(shapes: Dict(String, Shape), exit: Bool) -> Nil {
       |> gl.draw(rl.Color(0, 0, 0, 255))
 
       // Draw the shapes.
-      gl.shape_get(shapes, "space_ship")
-      |> gl.draw(rl.Color(255, 255, 255, 255))
-
-      gl.shape_get(shapes, "square")
-      |> gl.draw(rl.Color(255, 255, 255, 255))
+      shapes
+      |> gl.shape_draw("space_ship", rl.Color(255, 255, 255, 255))
+      |> gl.shape_draw("square", rl.Color(250, 200, 0, 255))
+      |> gl.shape_draw("square.1", rl.Color(200, 250, 0, 255))
 
       rl.end_drawing()
       rl_loop(
@@ -107,6 +106,8 @@ pub fn main() -> Nil {
         gl.vector2([0, 1, 1, 2, 2, 0]),
       ),
     )
+    |> gl.shape_clone("square", "square.1")
+    |> gl.shape_move("square.1", 80)
 
   rl.init_window(800, 600, "raylib [core] example - basic window")
   rl.set_target_fps(30)

@@ -118,10 +118,31 @@ pub fn draw(shape: Shape, color: Color) -> Shape {
   shape
 }
 
+pub fn shape_draw(
+  shapes: Dict(String, Shape),
+  name: String,
+  color: Color,
+) -> Dict(String, Shape) {
+  shape_get(shapes, name)
+  |> draw(color)
+  shapes
+}
+
 pub fn shape_get(shapes: Dict(String, Shape), name: String) -> Shape {
   shapes
   |> dict.get(name)
   |> result.unwrap(None)
+}
+
+pub fn shape_clone(
+  shapes: Dict(String, Shape),
+  name: String,
+  clone_name: String,
+) -> Dict(String, Shape) {
+  case name != clone_name {
+    True -> shape_reg(shapes, clone_name, shape_get(shapes, name))
+    _ -> shapes
+  }
 }
 
 pub fn shape_set(
