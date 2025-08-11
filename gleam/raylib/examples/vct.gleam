@@ -68,9 +68,10 @@ pub fn rl_loop(shapes: Dict(String, Shape), exit: Bool) -> Nil {
 
       // Draw the shapes.
       shapes
-      |> gl.shape_draw("space_ship", rl.Color(255, 255, 255, 255))
-      |> gl.shape_draw("square", rl.Color(250, 200, 0, 255))
-      |> gl.shape_draw("square.1", rl.Color(200, 250, 0, 255))
+      |> gl.shape_draw("space_ship")
+      //|> gl.shape_draw_color("square", rl.Color(250, 200, 0, 255))
+      //|> gl.shape_draw_color("square.1", rl.Color(200, 250, 0, 255))
+      |> gl.shape_draw("^square[.0-9]*")
 
       rl.end_drawing()
       rl_loop(
@@ -95,6 +96,7 @@ pub fn main() -> Nil {
         0,
         gl.vector2([-30, -30, -30, 30, 30, 30, 30, -30]),
         gl.vector2([0, 1, 1, 2, 2, 3, 3, 0]),
+        rl.Color(250, 200, 0, 255),
       ),
     )
     |> gl.shape_reg(
@@ -104,9 +106,11 @@ pub fn main() -> Nil {
         0,
         gl.vector2([-30, 30, 0, -30, 30, 30]),
         gl.vector2([0, 1, 1, 2, 2, 0]),
+        rl.Color(255, 255, 255, 255),
       ),
     )
     |> gl.shape_clone("square", "square.1")
+    |> gl.shape_color("square.1", rl.Color(200, 250, 0, 255))
     |> gl.shape_move("square.1", 80)
 
   rl.init_window(800, 600, "raylib [core] example - basic window")
